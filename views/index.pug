@@ -1,0 +1,31 @@
+doctype html
+head
+    meta(charset='utf-8')
+    title 국밥 계산기
+    meta(property="og:title" content="당신의 국밥을 편리하게,")
+    meta(property="og:site_name" content="국밥 계산기")
+    meta(property="og:url" content="http://cloudus.io/100개")
+    meta(property="og:description" content="클라우드어스와 함께 하세요.")
+    meta(property="og:image" content="/images.jpg")
+    style.
+        @font-face { font-family: 'Dokdo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.4/Dokdo.woff') format('woff'); font-weight: normal; font-style: normal; }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            font-family: 'Dokdo';
+            text-align: center;
+        }
+body
+    .container
+        if has_success
+            span(style='font-size: 4em;') #{origin}만 아끼시면, #[br]
+            span(style='font-size: 20em;') #{gukbap}
+            span(style='font-size: 5em;') 그릇 #[br]
+            span(style='font-size: 4em;') 을 드실 수 있으십니다.
+        else
+            span(style='font-size: 10em;') 네?#[br]
+            span(style='font-size: 4.5em;') 얼마를 말씀하시는거죠?
